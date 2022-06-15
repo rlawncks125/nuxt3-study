@@ -8,11 +8,25 @@ export default defineNuxtConfig({
     //  '@nuxtjs/composition-api/module', // nuxt2 에서 사용할경우
     "@pinia/nuxt",
   ],
+  // tailwind & postcss 설정
+  css: ["~/assets/css/tailwind.css"],
+  build: {
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
+  },
+
+  // 모듈로 css 주입
   modules: [
-    // css 선언
     defineNuxtModule({
       setup(options, nuxt) {
-        nuxt.options.css.push("@/assets/test.css");
+        nuxt.options.css.push("~/assets/css/test.css");
+        // nuxt.options.css.push("~/assets/css/tailwind.css");
       },
     }),
   ],

@@ -8,7 +8,7 @@
     <p>storeCount : {{ store.count }}</p>
     <p>RefCount : {{ count }}</p>
     <p>NoRefCount : {{ noRefCount }}</p>
-    <p>getterCount : {{ getterCount }}</p>
+    <p class="text-red-400">getterCount : {{ getterCount }}</p>
 
     <button @click="awaitFunc">async 함수 실행</button>
     <test-2 />
