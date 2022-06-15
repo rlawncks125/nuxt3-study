@@ -4,6 +4,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "generate:netlify": "nuxt generate && cp ./netlify.toml .output/public",
     "preview": "nuxt preview"
   },
   "devDependencies": {

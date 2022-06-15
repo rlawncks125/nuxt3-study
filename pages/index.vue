@@ -56,6 +56,15 @@ export default defineComponent({
       console.log("index.vue");
     });
 
+    useHead({
+      title: "Nuxt3 Test Index Vue",
+      meta: [
+        {
+          name: "description",
+          content: "Nuxt3 Test Index Vue.",
+        },
+      ],
+    });
     return {
       ts,
       useX,

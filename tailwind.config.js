@@ -4,7 +4,8 @@
 // tailwind.config.js
 module.exports = {
   mode: "jit",
-  purge: [
+  // purge -> content
+  content: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",

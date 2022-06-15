@@ -27,6 +27,43 @@ export default defineComponent({
         .addEventListener("change", setDarkmode);
     });
 
+    useHead({
+      titleTemplate: (titleChunk) => {
+        const baseTitle = "Nuxt3";
+        return titleChunk ? `${titleChunk} - ${baseTitle}` : baseTitle;
+      },
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+      charset: "utf-8",
+      meta: [
+        {
+          name: "description",
+          content: "Nuxt3 Test App Vue.",
+        },
+        {
+          name: "og:title",
+          property: "og:title",
+          content: `Nuxt3 Test App Vue Title.`,
+        },
+        {
+          name: "og:image",
+          property: "og:image",
+          content: `https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg`,
+        },
+        {
+          name: "og:description",
+          property: "og:description",
+          content: `Nuxt3 Test App Vue.`,
+        },
+        {
+          name: "og:url",
+          property: "og:url",
+          content: "https://willowy-tarsier-a43c38.netlify.app/",
+        },
+      ],
+      bodyAttrs: {
+        class: "test",
+      },
+    });
     return {};
   },
 });

@@ -24,12 +24,3 @@ export const useCounterStore = defineStore("counter", {
     },
   },
 });
-
-export const useTestStore = defineStore("test", {
-  state: () => ({ txt: "test" }),
-  actions: {
-    getTest() {
-      return this.txt;
-    },
-  },
-});

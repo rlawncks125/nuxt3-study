@@ -7,6 +7,9 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
+    useHead({
+      title: "ems 자식 컴포넌트",
+    });
     return {};
   },
 });
