@@ -1,5 +1,5 @@
 <template>
-  <div>Header Vue</div>
+  <div class="text-green-200">Header LayOut</div>
 </template>
 
 <script lang="ts">

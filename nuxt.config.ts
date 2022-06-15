@@ -20,7 +20,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   // 모듈로 css 주입
   modules: [
     defineNuxtModule({

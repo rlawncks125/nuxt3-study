@@ -1,6 +1,5 @@
-// 설치
-// npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-// 실행 npx tailwindcss init
+// 참고 : https://tailwindcss.com/docs/guides/nuxtjs
+// "@nuxt/postcss8", // 아직 nuxt2에서만 사용가능
 
 // tailwind.config.js
 module.exports = {
@@ -11,8 +10,9 @@ module.exports = {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
+    "./app.vue",
   ],
-  darkMode: true, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {},
   },

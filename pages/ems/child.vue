@@ -1,5 +1,5 @@
 <template>
-  <div>child Page</div>
+  <div>child Page layout non-header</div>
 </template>
 
 <script lang="ts">
