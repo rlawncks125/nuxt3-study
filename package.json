@@ -10,6 +10,7 @@
     "nuxt": "3.0.0-rc.4"
   },
   "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.4",
     "@nuxtjs/composition-api": "^0.32.0",
     "@pinia/nuxt": "^0.1.9",
     "pinia": "^2.0.14"
