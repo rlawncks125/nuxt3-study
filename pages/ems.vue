@@ -49,14 +49,10 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    const router = useRouter();
-
     const users = useState("users");
     const parmId = useState("id");
-    const goIdLink = () => {
-      router.push(`/ems/page-${users.value}/${parmId.value}`);
-    };
-    return { parmId, goIdLink, users };
+
+    return { parmId, users };
   },
 });
 </script>

@@ -12,21 +12,6 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    onMounted(async () => {
-      const setDarkmode = () => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      };
-
-      // 다크모드 감지
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", setDarkmode);
-    });
-
     useHead({
       titleTemplate: (titleChunk) => {
         const baseTitle = "Nuxt3";
@@ -47,23 +32,48 @@ export default defineComponent({
         {
           name: "og:image",
           property: "og:image",
-          content: `https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg`,
+          content:
+            "https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg",
         },
         {
           name: "og:description",
           property: "og:description",
-          content: `Nuxt3 Test App Vue.`,
+          content: "Nuxt3 Test App Vue.",
         },
         {
           name: "og:url",
           property: "og:url",
-          content: "https://willowy-tarsier-a43c38.netlify.app/",
+          content: "http://nuxt3.kimjuchan97.site",
+        },
+        {
+          name: "og:type",
+          property: "og:type",
+          content: "website",
         },
       ],
+      htmlAttrs: {
+        class: "test",
+      },
       bodyAttrs: {
         class: "test",
       },
     });
+
+    onMounted(async () => {
+      const setDarkmode = () => {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      };
+
+      // 다크모드 감지
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", setDarkmode);
+    });
+
     return {};
   },
 });

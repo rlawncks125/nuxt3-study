@@ -31,7 +31,8 @@ export default defineComponent({
         {
           name: "og:image",
           property: "og:image",
-          content: `https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg`,
+          content:
+            "https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg",
         },
       ],
     });
