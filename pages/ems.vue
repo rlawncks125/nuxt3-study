@@ -27,10 +27,8 @@
           />
         </div>
       </div>
-      <NuxtLink
-        class="text-center"
-        :to="`/ems/users/id?id=${parmId}&users=${users}`"
-        >/ems/users/id?id=${parmId}&users=${users} 이동</NuxtLink
+      <NuxtLink class="text-center" :to="`/ems/page-${users}/${parmId}`"
+        >/ems/page-${users}/${parmId} 이동</NuxtLink
       >
     </section>
 

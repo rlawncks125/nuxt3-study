@@ -1,7 +1,7 @@
-# 문제점
+# SSG 빌드 문제점
 
 동적 라우트를 구성할시 ex ) /ems/page-[:users]/[:id]
-build SSG,RSA 빌드시 /ems/page-uundefined/undefined로 페이지를 만듬
+build SSG 빌드시 /ems/page-uundefined/undefined로 페이지를 만듬
 
 Dynamic Route => query paramter 로 값을 받게 변경
 
