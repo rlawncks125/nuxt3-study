@@ -27,8 +27,10 @@
           />
         </div>
       </div>
-      <NuxtLink class="text-center" :to="`/ems/page-${users}/${parmId}`"
-        >/ems/page-[users]/[id] 이동</NuxtLink
+      <NuxtLink
+        class="text-center"
+        :to="`/ems/users/id?id=${parmId}&users=${users}`"
+        >/ems/users/id?id=${parmId}&users=${users} 이동</NuxtLink
       >
     </section>
 
@@ -51,6 +53,22 @@ export default defineComponent({
   setup() {
     const users = useState("users");
     const parmId = useState("id");
+
+    useHead({
+      title: "ems Vue",
+      meta: [
+        {
+          name: "og:title",
+          property: "og:title",
+          content: `Nuxt3 Test Ems Vue Title.`,
+        },
+        {
+          name: "og:description",
+          property: "og:description",
+          content: "Nuxt3 Test Ems Vue.",
+        },
+      ],
+    });
 
     return { parmId, users };
   },

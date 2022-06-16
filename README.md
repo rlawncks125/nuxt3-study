@@ -1,3 +1,10 @@
+# 문제점
+
+동적 라우트를 구성할시 ex ) /ems/page-[:users]/[:id]
+build SSG,RSA 빌드시 /ems/page-uundefined/undefined로 페이지를 만듬
+
+Dynamic Route => query paramter 로 값을 받게 변경
+
 # Nuxt 3 프로젝트 설치
 
 npx nuxi init nuxt-app
@@ -15,42 +22,5 @@ ref -> useState
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

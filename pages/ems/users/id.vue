@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ $route.params }}</p>
+    <p>{{ $route.query }}</p>
   </div>
 </template>
 
@@ -12,11 +12,11 @@ export default defineComponent({
     const route = useRoute();
 
     useHead({
-      title: `parms 를 가지는 페이지 : ${route.params.users} + ${route.params.id}`,
+      title: `parms 를 가지는 페이지 : ${route.query.users} + ${route.query.id}`,
       meta: [
         {
           name: "description",
-          content: "Nuxt3 Test App Vue.",
+          content: "Nuxt3 Params Vue.",
         },
         {
           name: "og:title",
@@ -26,13 +26,13 @@ export default defineComponent({
         {
           name: "og:description",
           property: "og:description",
-          content: `${route.params.users} - ${route.params.id} 사이트 입니다.`,
+          content: `${route.query.users} - ${route.query.id} 사이트 입니다.`,
         },
         {
           name: "og:image",
           property: "og:image",
           content:
-            "https://res.cloudinary.com/dhdq4v4ar/image/upload/v1654624758/%ED%8F%AC%ED%94%841_isxw3h.jpg",
+            "https://res.cloudinary.com/dhdq4v4ar/image/upload/v1653939813/back-Portfolio/cvgfjjza5eqoz4ufwowd.jpg",
         },
       ],
     });
