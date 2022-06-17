@@ -45,6 +45,11 @@ export default defineComponent({
           property: "og:type",
           content: "website",
         },
+        {
+          name: "og:url",
+          property: "og:url",
+          content: "https://nuxylocal.kimjuchan97.site",
+        },
       ],
       htmlAttrs: {
         class: "test",

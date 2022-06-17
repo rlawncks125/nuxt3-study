@@ -1,3 +1,9 @@
+# Nginx설정 문제점
+
+SSL/TLS 설정까지 다하고,접속 확인까지 했는데
+open graph Debugger 가 안된다.
+예상 후보 : 봇탐지 , nginx 설정,
+
 # SSG 빌드 문제점
 
 동적 라우트를 구성할시 ex ) /ems/page-[:users]/[:id]
