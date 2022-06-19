@@ -4,7 +4,7 @@ import { defineNuxtConfig } from "nuxt";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // target: "static", // SSG 배포 설정
-  // ssr: false, // csa배포
+  // ssr: false, // CSA배포
 
   buildModules: [
     // https://composition-api.nuxtjs.org/getting-started/setup#quick-start

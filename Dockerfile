@@ -14,11 +14,11 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+# RUN npm run generate
 
-# CMD ["node",".output/server/index.mjs"]
+CMD ["node",".output/server/index.mjs"]
+# CMD ["npm","run","httpS"]
 
-
-# CMD ["npm", "run", "dev"]
 
 
 FROM node:14-slim as production-stage

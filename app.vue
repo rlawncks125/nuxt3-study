@@ -45,18 +45,12 @@ export default defineComponent({
           property: "og:type",
           content: "website",
         },
-        {
-          name: "og:url",
-          property: "og:url",
-          content: "https://nuxylocal.kimjuchan97.site",
-        },
+        // {
+        //   name: "og:url",
+        //   property: "og:url",
+        //   content: "http://nuxylocal.kimjuchan97.site",
+        // },
       ],
-      htmlAttrs: {
-        class: "test",
-      },
-      bodyAttrs: {
-        class: "test",
-      },
     });
 
     onMounted(async () => {
