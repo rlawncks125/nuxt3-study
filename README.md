@@ -1,8 +1,8 @@
 # Nginx설정 문제점
 
 SSL/TLS 설정까지 다하고,접속 확인까지 했는데
-open graph Debugger 가 안된다.
-에러 후보 : 크롤링이 안됀다.
+open graph Debugger 가 안된다.   
+에러 : 크롤링이 안됀다.
     
 확인 : SSG 로 테스트해도 똑같음 , curl로 찍으면 잘찍힘 
 
