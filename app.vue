@@ -2,7 +2,7 @@
   <div>
     <div class="border text-red-400">app vue navBar</div>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage :key="$route.fullPath" />
     </NuxtLayout>
   </div>
 </template>

@@ -3,7 +3,6 @@
     <p class="text-center text-amber-400">home vue( index vue )</p>
     <ul class="flex gap-2">
       <nuxt-link to="/ems"> ems Go</nuxt-link>
-      <nuxt-link to="/ems"> ems Go</nuxt-link>
     </ul>
 
     <section class="border my-2 p-1">
@@ -27,19 +26,16 @@
     </section>
     <test-2 />
   </div>
-  <vue-qrcode
-    value="https://study.kimjuchan97.xyz/"
-    :color="{ dark: '#000000ff', light: '#0000' }"
-  />
+  <div>
+    <vue-qrcode url="https://study.kimjuchan97.xyz/" />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useCounterStore } from "@/store/index";
-import vueQrcode from "vue-qrcode";
 
 export default defineComponent({
-  components: { vueQrcode },
   setup() {
     const ts = "text Change Test";
     // ref <-- 메모리 누수 문제로

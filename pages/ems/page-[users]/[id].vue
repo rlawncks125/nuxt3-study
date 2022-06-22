@@ -1,7 +1,12 @@
 <template>
   <div>
     <p>{{ $route.params }}</p>
+    <img :src="srcImage" alt="" />
   </div>
+
+  <vue-qrcode
+    :url="`http://nuxt3-og-test.herokuapp.com/ems/page-${$route.params.users}/${$route.params.id}`"
+  />
 </template>
 
 <script lang="ts">
@@ -27,8 +32,14 @@ const queryImage = async (id: number) => {
 export default defineComponent({
   setup() {
     const route = useRoute();
+    const srcImage = ref();
     console.log(route.params);
 
+    onMounted(async () => {
+      srcImage.value = await queryImage(+route.params.id);
+    });
+
+    // og
     const { data: ogImage } = useAsyncData(
       "ogImage",
       () => queryImage(+route.params.id),
@@ -62,7 +73,7 @@ export default defineComponent({
       ],
     });
 
-    return {};
+    return { srcImage };
   },
 });
 </script>
