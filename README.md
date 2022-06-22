@@ -1,10 +1,21 @@
+# 사용 라이브러리
+
+```
+
+// qrcode npm 이용
+vue-qrcode <-- qrCode라이브러리를 사용하여 만든 컴포넌트
+
+npm i qrcode vue-qrcode
+
+```
+
 # Nginx설정 문제점
 
 SSL/TLS 설정까지 다하고,접속 확인까지 했는데
-open graph Debugger 가 안된다.   
+open graph Debugger 가 안된다.  
 에러 : 크롤링이 안됀다.
-    
-확인 : SSG 로 테스트해도 똑같음 , curl로 찍으면 잘찍힘 
+
+확인 : SSG 로 테스트해도 똑같음 , curl로 찍으면 잘찍힘
 
 # SSG 빌드 문제점
 

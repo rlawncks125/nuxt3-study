@@ -48,7 +48,7 @@ export default defineComponent({
         // {
         //   name: "og:url",
         //   property: "og:url",
-        //   content: "http://nuxylocal.kimjuchan97.site",
+        //   content: "http://kimjuchan97.xyz",
         // },
       ],
     });
