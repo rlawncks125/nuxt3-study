@@ -1,13 +1,19 @@
 <template>
   <div>pwa</div>
+  <button id="subscribe" @click.prevent="clickSubBtn">subscribe!</button>
+  <div id="subscription_detail"></div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { clickSubBtn, initPush } from "@/plugins/sw.client";
 
 export default defineComponent({
   setup() {
-    return {};
+    onMounted(() => {
+      initPush();
+    });
+    return { clickSubBtn };
   },
 });
 </script>
