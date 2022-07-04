@@ -5,9 +5,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # 이전 cache 삭제
-RUN npm cache verify 
+# RUN npm cache verify 
 
-RUN npm cache clean --force
+# RUN npm cache clean --force
 
 RUN npm install
 
@@ -21,10 +21,10 @@ CMD ["node",".output/server/index.mjs"]
 
 
 
-FROM node:14-slim as production-stage
-RUN mkdir /app
+# FROM node:14-slim as production-stage
+# RUN mkdir /app
 
-COPY --from=build-stage /app/.output /app
+# COPY --from=build-stage /app/.output /app
 
 
-CMD ["node","app/server/index.mjs"]
+# CMD ["node","app/server/index.mjs"]

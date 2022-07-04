@@ -1,7 +1,7 @@
 <template>
   <div>pwa</div>
   <button id="subscribe" @click.prevent="clickSubBtn">subscribe!</button>
-  <div id="subscription_detail"></div>
+  <div id="subscription_detail" class="break-words"></div>
 </template>
 
 <script lang="ts">

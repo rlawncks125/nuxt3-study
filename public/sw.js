@@ -1,4 +1,4 @@
-const cacheName = "v6";
+const cacheName = "v1";
 const cacheList = [
   "/",
   "/manifest.json",
@@ -58,13 +58,29 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
+// push 알람 처리
 self.addEventListener("push", (event) => {
   console.log("push", event.data.text());
 
-  const title = "my PWA";
+  // 보내는 데이터 형식
+  // {
+  //  "title":"pwa 알람 테스트입니다",
+  //  "body":"바디 ㅋㅋㅋ"
+  // }
+
+  const data = JSON.parse(event.data.text());
+  console.log(data);
+
+  const title = data.title;
   const options = {
-    body: event.data.text(),
+    body: data.body,
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  console.log(event.data);
+  event.waitUntil(clients.openWindow("https://study.kimjuchan97.xyz"));
 });

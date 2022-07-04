@@ -1,5 +1,6 @@
 // 참조 블로그 : https://geundung.dev/88?category=800492
 
+// web-push 사이트 : https://web-push-codelab.glitch.me/
 const Publickey =
   "BFLHBvpUcFLzAvMYrSzt3T9tGCvurGrpQseVkFyiJx2TU2gTQez7Idf20pP13PWSZmDWBpU5Fv7aGgIxAoBFjd8";
 let isSub = false;
@@ -70,15 +71,24 @@ export const clickSubBtn = () => {
 
 // 알림 구독
 const subscribe = () => {
-  const applicationServerKey = urlB64ToUint8Array(Publickey);
+  // const applicationServerKey = urlB64ToUint8Array(Publickey);
+  const applicationServerKey = Publickey;
   swRegist.pushManager
     .subscribe({
       userVisibleOnly: true,
       applicationServerKey: applicationServerKey,
     })
-    .then((subscription) => {
+    .then(async (subscription) => {
       console.log("User is subscribed.");
       updateSubDetail(subscription);
+      await fetch("https://myapi.kimjuchan97.site/notification/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(subscribe),
+      });
       isSub = true;
       updateBtnText();
     })

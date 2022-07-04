@@ -3,6 +3,7 @@
     <p class="text-center text-amber-400">home vue( index vue )</p>
     <ul class="flex gap-2">
       <nuxt-link to="/ems"> ems Go</nuxt-link>
+      <nuxt-link to="/pwa"> pwa Go</nuxt-link>
     </ul>
 
     <section class="border my-2 p-1">
