@@ -10,3 +10,13 @@ export const registerNotification = async (subscription: any) => {
     }),
   });
 };
+
+export const deleteRegister = async (subscription: string) => {
+  const {
+    keys: { auth },
+  } = JSON.parse(JSON.stringify(subscription));
+
+  return await fetch(`https://myapi.kimjuchan97.site/notification/${auth}`, {
+    method: "DELETE",
+  });
+};

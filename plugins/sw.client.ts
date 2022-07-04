@@ -1,6 +1,6 @@
 // 참조 블로그 : https://geundung.dev/88?category=800492
 
-import { registerNotification } from "~~/api/notification";
+import { deleteRegister, registerNotification } from "~~/api/notification";
 
 // web-push 사이트 : https://web-push-codelab.glitch.me/
 const Publickey =
@@ -58,6 +58,7 @@ export const updateSubDetail = (subscription) => {
     detailArea.parentElement.classList.remove("hide");
   } else {
     detailArea.parentElement.classList.add("hide");
+    detailArea.innerText = "";
   }
 };
 
@@ -85,7 +86,7 @@ const subscribe = () => {
       updateSubDetail(subscription);
       isSub = true;
       updateBtnText();
-      // 백엔드로 엔드포인트 보냄
+      // 백엔드로 구독 등록
       // await registerNotification(subscription);
     })
     .catch((err) => {
@@ -98,8 +99,10 @@ const subscribe = () => {
 const unsubscribe = () => {
   swRegist.pushManager
     .getSubscription()
-    .then((subscription) => {
+    .then(async (subscription) => {
       if (subscription) {
+        // 백엔드 구독 삭제
+        // await deleteRegister(subscription);
         return subscription.unsubscribe();
       }
     })
