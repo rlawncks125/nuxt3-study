@@ -1,4 +1,4 @@
-const cacheName = "v1";
+const cacheName = "v1.0.0.1";
 const cacheList = [
   "/",
   "/manifest.json",
@@ -15,6 +15,11 @@ const cacheList = [
   "/icons/logo_x512.png",
 ];
 // ...(process.env.NODE_ENV === "prod" ? [] : []),
+
+const hosts = [
+  "http://localhost:3000/",
+  "https://nuxt3-og-test.herokuapp.com/",
+];
 
 self.addEventListener("install", () => {
   // 대기상태에 머무르지 않고 활성화

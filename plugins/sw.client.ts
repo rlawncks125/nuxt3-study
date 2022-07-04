@@ -1,5 +1,7 @@
 // 참조 블로그 : https://geundung.dev/88?category=800492
 
+import { registerNotification } from "~~/api/notification";
+
 // web-push 사이트 : https://web-push-codelab.glitch.me/
 const Publickey =
   "BFLHBvpUcFLzAvMYrSzt3T9tGCvurGrpQseVkFyiJx2TU2gTQez7Idf20pP13PWSZmDWBpU5Fv7aGgIxAoBFjd8";
@@ -81,19 +83,10 @@ const subscribe = () => {
     .then(async (subscription) => {
       console.log("User is subscribed.");
       updateSubDetail(subscription);
-
-      await fetch("https://myapi.kimjuchan97.site/notification/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify({
-          endPoint: subscription,
-        }),
-      });
       isSub = true;
       updateBtnText();
+      // 백엔드로 엔드포인트 보냄
+      // await registerNotification(subscription);
     })
     .catch((err) => {
       console.log("Failed to subscribe the user: ", err);
