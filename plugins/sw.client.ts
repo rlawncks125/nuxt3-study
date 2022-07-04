@@ -81,13 +81,16 @@ const subscribe = () => {
     .then(async (subscription) => {
       console.log("User is subscribed.");
       updateSubDetail(subscription);
+
       await fetch("https://myapi.kimjuchan97.site/notification/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(subscribe),
+        body: JSON.stringify({
+          endPoint: subscription,
+        }),
       });
       isSub = true;
       updateBtnText();
