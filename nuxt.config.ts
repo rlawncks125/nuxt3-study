@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   // ssr: false, // CSA배포
 
   // tailwind & postcss 설정
-  css: ["@/assets/css/tailwind.css"],
+  css: [
+    "@/assets/css/tailwind.css",
+    // font Awesome css
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   build: {
     postcss: {
       postcssOptions: {

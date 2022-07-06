@@ -30,6 +30,8 @@
   <div>
     <vue-qrcode url="https://study.kimjuchan97.xyz/" />
   </div>
+
+  <fa-icon :icon="['fas', 'ban']" size="3x" />
 </template>
 
 <script lang="ts">
