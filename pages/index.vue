@@ -27,6 +27,7 @@
     </section>
     <test-2 />
   </div>
+  <p v-directive-test>vue directive test</p>
   <div>
     <vue-qrcode url="https://study.kimjuchan97.xyz/" />
   </div>
