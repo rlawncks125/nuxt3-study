@@ -3,8 +3,13 @@
 
 import { defineStore } from "pinia";
 
+interface State {
+  count: number;
+}
+
 export const useCounterStore = defineStore("counter", {
-  state: () => ({ count: 0 }),
+  state: (): State => ({ count: 0 }),
+
   getters: {
     getterCount: (state) => state.count,
   },
@@ -23,4 +28,5 @@ export const useCounterStore = defineStore("counter", {
       });
     },
   },
+  persist: true,
 });

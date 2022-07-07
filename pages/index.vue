@@ -26,13 +26,14 @@
       <button @click="awaitFunc">async 함수 실행</button>
     </section>
     <test-2 />
-  </div>
-  <p v-directive-test>vue directive test</p>
-  <div>
-    <vue-qrcode url="https://study.kimjuchan97.xyz/" />
-  </div>
 
-  <fa-icon :icon="['fas', 'ban']" size="3x" />
+    <p v-directive-test>vue directive test</p>
+    <div>
+      <vue-qrcode url="https://study.kimjuchan97.xyz/" />
+    </div>
+
+    <fa-icon :icon="['fas', 'ban']" size="3x" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -53,7 +54,7 @@ export default defineComponent({
     const store = useCounterStore();
     const { count, getterCount } = toRefs(store);
     const { count: noRefCount, increment, decrement, waitFunction } = store;
-
+    console.log(store.pluginInject);
     const awaitFunc = async () => {
       await waitFunction().then((v) => console.log(v));
     };
