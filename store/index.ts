@@ -34,8 +34,28 @@ export const useCounterStore = defineStore("counter", {
 });
 
 // 컴포지션 api 방식을 이용한 store
+export const useCountCompositionApi = defineStore(
+  "counter2",
+  () => {
+    const count = useState("compositionCount", () => 0);
+
+    const increment = () => {
+      count.value++;
+    };
+    const decrement = () => {
+      count.value--;
+    };
+
+    return { count, increment, decrement };
+  },
+  {
+    // 컴포지션 api 방식을 사용하더라도 persist선언 가능
+    persist: true,
+  }
+);
+
 // nuxt3 에서 지원하는 useCookie를 이용한
-// 쿠기 저장
+// 쿠키 저장
 export const useCounterCookie = defineStore("cookieCount", () => {
   const count = useCookie<number>("cookie counter", { default: () => 0 });
 
