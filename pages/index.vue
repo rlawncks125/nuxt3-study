@@ -20,6 +20,12 @@
         <p>NoRefCount : {{ noRefCount }}</p>
         <p>getterCount : {{ getterCount }}</p>
       </div>
+      <div>
+        <!-- cookie Store  -->
+        <p>cookieCount : {{ cookieCounter }}</p>
+        <button @click="cookieIncrement">+</button>
+        <button @click="cookieDecrement">-</button>
+      </div>
     </section>
 
     <section>
@@ -38,7 +44,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCounterStore } from "@/store/index";
+import { useCounterCookie, useCounterStore } from "@/store/index";
+import { storeToRefs } from "pinia";
 
 export default defineComponent({
   setup() {
@@ -58,6 +65,9 @@ export default defineComponent({
     const awaitFunc = async () => {
       await waitFunction().then((v) => console.log(v));
     };
+    const { count: cookieCounter } = storeToRefs(useCounterCookie());
+    const { increment: cookieIncrement, decrement: cookieDecrement } =
+      useCounterCookie();
 
     onMounted(() => {
       console.log("index.vue");
@@ -83,6 +93,9 @@ export default defineComponent({
       increment,
       decrement,
       awaitFunc,
+      cookieCounter,
+      cookieIncrement,
+      cookieDecrement,
     };
   },
 });

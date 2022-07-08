@@ -28,5 +28,23 @@ export const useCounterStore = defineStore("counter", {
       });
     },
   },
+  // pinia-plugin-persistedstate 라이브러리 를 활용한
+  // 쿠기 저장 활성화
   persist: true,
+});
+
+// 컴포지션 api 방식을 이용한 store
+// nuxt3 에서 지원하는 useCookie를 이용한
+// 쿠기 저장
+export const useCounterCookie = defineStore("cookieCount", () => {
+  const count = useCookie<number>("cookie counter", { default: () => 0 });
+
+  const increment = () => {
+    count.value = ++count.value;
+  };
+  const decrement = () => {
+    count.value = --count.value;
+  };
+
+  return { count, increment, decrement };
 });
