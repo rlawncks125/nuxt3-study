@@ -50,6 +50,17 @@ export default defineNuxtConfig({
         href: "/icons/logo_x180.png",
       },
       { rel: "manifest", href: "/manifest.json" },
+      {
+        // swiper css
+        rel: "stylesheet",
+        href: "https://unpkg.com/swiper/swiper-bundle.min.css",
+      },
+    ],
+    script: [
+      {
+        // swiper js
+        src: "https://unpkg.com/swiper/swiper-bundle.min.js",
+      },
     ],
   },
 });

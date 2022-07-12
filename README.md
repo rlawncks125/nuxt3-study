@@ -9,11 +9,18 @@ npm i qrcode vue-qrcode
 
 ```
 
-# 외부 라이브러리 사용시
+# 외부 라이브러리 web api 오류발생시
 
 ```
-// web api를 사용하기위해 .clinet를 붙여서 파일을 만들어줌
+// web api를 접근 하기위해 .clinet를 붙여서 파일을 만들어줌
 plugins/파일이름.clinet.ts
+
+
+<!-- 오류 모음 -->
+// document ,navigator , window ... 등등 web api
+
+ ( "document | navigator | window" is not defined )
+
 
 ```
 
