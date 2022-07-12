@@ -65,7 +65,7 @@ export default defineComponent({
     // cookie
     const store3 = useCounterCookie();
 
-    // 컴포지션 api 타입 분해할당 방식으로 사용시
+    // 컴포지션 api 타입을 분해할당 방식으로 사용시
     // 분해할당 방식으로 사용할시 반응형 객체들을 무시하므로
     // 반응형 객체들은 storeToRefs로 반응형 객체로 변환시켜줌
     const { count: countCompo } = storeToRefs(useCountCompositionApi());

@@ -40,7 +40,7 @@
       </p>
       <NuxtPage />
     </NuxtLayout>
-    <test-2 />
+    <div></div>
   </div>
 </template>
 

@@ -9,6 +9,14 @@ npm i qrcode vue-qrcode
 
 ```
 
+# 외부 라이브러리 사용시
+
+```
+// web api를 사용하기위해 .clinet를 붙여서 파일을 만들어줌
+plugins/파일이름.clinet.ts
+
+```
+
 # Nginx설정 문제점
 
 SSL/TLS 설정까지 다하고,접속 확인까지 했는데

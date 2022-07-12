@@ -2,6 +2,8 @@
   <vue-qrcode
     :value="$props.url"
     :color="{ dark: '#000000ff', light: '#0000' }"
+    :type="'image/png'"
+    :quality="0.92"
   />
 </template>
 

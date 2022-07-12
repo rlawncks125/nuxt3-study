@@ -2,13 +2,14 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "httpS": "npx http-server -p 3000 .output/public",
+    "dev": "nuxt dev --port=3033",
+    "httpS": "npx http-server -p 3033 .output/public",
     "generate": "nuxt generate",
     "generate:netlify": "nuxt generate && cp ./netlify.toml .output/public",
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "nuxt": "3.0.0-rc.4",
@@ -22,6 +23,7 @@
     "@nuxt/kit": "^3.0.0-rc.4",
     "@nuxtjs/composition-api": "^0.32.0",
     "@pinia/nuxt": "^0.1.9",
+    "aos": "^2.3.4",
     "http-server": "^14.1.1",
     "parse-path": "^5.0.0",
     "pinia": "^2.0.14",

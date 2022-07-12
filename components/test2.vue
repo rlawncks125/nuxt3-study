@@ -6,8 +6,10 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  props: { testProps: String },
   setup() {
-    return {};
+    const childSS = "sss";
+    return { childSS };
   },
 });
 </script>
