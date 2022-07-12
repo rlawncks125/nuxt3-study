@@ -9,11 +9,11 @@ npm i qrcode vue-qrcode
 
 ```
 
-# 외부 라이브러리 web api 오류발생시
+# 외부 라이브러리 사용시 web api 오류발생
 
 ```
-// web api를 접근 하기위해 .clinet를 붙여서 파일을 만들어줌
-plugins/파일이름.clinet.ts
+// web api를 클라이언트에서만 접근 하기위해 .client 접미사 붙여서 파일을 만들어줌
+plugins/파일이름.client.ts
 
 
 <!-- 오류 모음 -->
@@ -21,6 +21,10 @@ plugins/파일이름.clinet.ts
 
  ( "document | navigator | window" is not defined )
 
+<!-- .clinet 접미사를 붙여서 파일만들시 안돼는 작동 -->
+// nuxt plugin 로 vue 접근시 작동안하거나 ,  작동해도 에러발생
+- vue directive로 el접근이 안됌 // getSSRProps 에러
+- vue compoent 주입 // Invalid value used as weak map key
 
 ```
 

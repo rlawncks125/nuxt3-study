@@ -1,3 +1,5 @@
+// @fortawesome/vue-fontawesome@3 으로 올려야함
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fas, faBan, faList } from "@fortawesome/free-solid-svg-icons";
