@@ -23,6 +23,7 @@
     "@nuxt/kit": "^3.0.0-rc.4",
     "@nuxtjs/composition-api": "^0.32.0",
     "@pinia/nuxt": "^0.1.9",
+    "@toast-ui/editor": "^3.1.8",
     "aos": "^2.3.4",
     "http-server": "^14.1.1",
     "parse-path": "^5.0.0",

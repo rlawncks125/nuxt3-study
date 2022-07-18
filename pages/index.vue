@@ -18,12 +18,15 @@
       <vue-qrcode url="https://study.kimjuchan97.xyz/" />
     </div>
 
-    <fa-icon :icon="['fas', 'ban']" size="3x" />
+    <fa-icon icon="bacon" size="4x" />
+
+    <toast-ui />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import FaIcon from "~~/components/fa-icon.vue";
 
 export default defineComponent({
   setup() {
@@ -31,15 +34,12 @@ export default defineComponent({
     // ref <-- 메모리 누수 문제로
     // nuxt에서는 useState로 대체
     const useX = useState<string>("x", () => "xState");
-
     const chageState = () => {
       useX.value = "change State ";
     };
-
     onMounted(() => {
       console.log("index.vue");
     });
-
     useHead({
       title: "Nuxt3 Test Index Vue",
       meta: [
@@ -55,5 +55,6 @@ export default defineComponent({
       chageState,
     };
   },
+  components: { FaIcon },
 });
 </script>
