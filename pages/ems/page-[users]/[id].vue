@@ -40,12 +40,11 @@ export default defineComponent({
     });
 
     // og
-    const { data: ogImage } = useAsyncData(
-      "ogImage",
-      () => queryImage(+route.params.id),
-      {
-        lazy: true,
-      }
+    const ogImage = useState("ogImage");
+    useLazyAsyncData("ogData", () =>
+      queryImage(+route.params.id).then((res) => {
+        ogImage.value = res;
+      })
     );
 
     useHead({
